@@ -1,33 +1,32 @@
 <div class="head">
-<h1 class="header"> Motivational Quotes</h1>
-<p class="header">read to be inspired</p>
+  <h1 class="header"> Motivational Quotes</h1>
+  <p class="header">read to be inspired</p>
 </div>
 
 
 <hr>
 
 
-  <div class="row" id="dis">
-    <div class="col-6">
-      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-    
-  
-  
+<div class="row" id="dis">
+  <div class="col-6">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+
+
+
     <div *ngFor='let quote of Quotes;let i = index'>
-      <h3 id="{{i}}" appStrikethrough>{{quote.name}}  : {{quote.completeDate|date|uppercase}}</h3>
+      <h3 id="{{i}}" appStrikethrough>{{quote.name}} : {{quote.completeDate|date|uppercase}}</h3>
 
       <div>
-         <a href="#" class="btn btn-sm animated-button thar-one"
-          (click)='toogleDetails(i)'>open</a> </div>
+        <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)'>open</a> </div>
 
       <div *ngIf="quote.showDescription">
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-     <hr>
+          <hr>
         </app-quote-details>
       </div>
     </div>
   </div>
 
-  
 
-<p *ngIf='Quotes.length> 3'> End of uploaded Quotes</p>
+
+  <p *ngIf='Quotes.length> 3'> End of uploaded Quotes</p>
