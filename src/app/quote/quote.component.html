@@ -1,0 +1,29 @@
+<h1 class="header"> Motivational Quotes</h1>
+<p class="header">read to be inspired</p>
+
+<hr>
+
+
+  <div class="row" id="dis">
+    <div class="col-6">
+      <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    
+  
+  
+    <div *ngFor='let quote of Quotes;let i = index'>
+      <h3 id="{{i}}" appStrikethrough>{{quote.name}} posted on: {{quote.completeDate|date|uppercase}}</h3>
+
+      <div>
+         <a href="#" class="btn btn-sm animated-button thar-one"
+          (click)='toogleDetails(i)'>open</a> </div>
+
+      <div *ngIf="quote.showDescription">
+        <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+        </app-quote-details>
+      </div>
+    </div>
+  </div>
+
+  
+
+<p *ngIf='Quotes.length> 4'>This is the End of Quotes</p>
