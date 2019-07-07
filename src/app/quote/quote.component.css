@@ -1,6 +1,11 @@
+.head{
+    background-color: gray;
+    background: cover;
+}
 .header{
     text-align: center;
     color: blue;
+    background-color: gray
 }
 #dis{
     text-align: center;

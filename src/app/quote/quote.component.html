@@ -1,5 +1,8 @@
+<div class="head">
 <h1 class="header"> Motivational Quotes</h1>
 <p class="header">read to be inspired</p>
+</div>
+
 
 <hr>
 
@@ -11,7 +14,7 @@
   
   
     <div *ngFor='let quote of Quotes;let i = index'>
-      <h3 id="{{i}}" appStrikethrough>{{quote.name}} posted on: {{quote.completeDate|date|uppercase}}</h3>
+      <h3 id="{{i}}" appStrikethrough>{{quote.name}}  : {{quote.completeDate|date|uppercase}}</h3>
 
       <div>
          <a href="#" class="btn btn-sm animated-button thar-one"
@@ -19,6 +22,7 @@
 
       <div *ngIf="quote.showDescription">
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+     <hr>
         </app-quote-details>
       </div>
     </div>
@@ -26,4 +30,4 @@
 
   
 
-<p *ngIf='Quotes.length> 4'>This is the End of Quotes</p>
+<p *ngIf='Quotes.length> 3'> End of uploaded Quotes</p>

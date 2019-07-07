@@ -3,5 +3,9 @@ border: 4px solid rgb(3, 19, 70);}
 
 #botton{
     margin-left: 30%;
-    margin-top: 2%;
+    margin-top: 9%;
+    
+}
+.inp{
+    border: 4px green;
 }
