@@ -1,17 +1,18 @@
-
+<div class="try">
 
 <h2>{{quote.description}}</h2>
 
     <button class=" btn btn-info" (click)='voteUp()' type="submit">
     
-      <span class="badge">{{upvote}} Likes</span>
+      <span class="buto">{{upvote}} Likes</span>
     </button>
     
-    <button style="color:brown"  (click)='voteDown()' class="btn btn-info" type="submit">
+    <button  (click)='voteDown()' class="btn btn-info" type="submit">
     
-      <span class="badge">{{downvote}} Dislikes</span>
+      <span class="buto1">{{downvote}} Dislikes</span>
     </button>
 
 <div >
   <a href="#" class="btn btn-sm animated-button victoria-one" (click)='quoteDelete(true)'>Delete Quote</a>
+</div>
 </div>

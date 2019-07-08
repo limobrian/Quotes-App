@@ -13,7 +13,7 @@
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
   </div>
-  <div class="col-6" id="">
+  <div class="col-6" id="for">
     <div *ngFor='let quote of Quotes;let i = index'>
       <h3 id="{{i}}" appStrikethrough>{{quote.name}} : {{quote.completeDate|date|uppercase}}</h3>
 
@@ -22,9 +22,9 @@
 
       <div *ngIf="quote.showDescription">
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-          <hr>
+
         </app-quote-details>
         <p *ngIf='Quotes.length> 3'> End of uploaded Quotes</p>
       </div>
-    </div>
+   
   </div>
