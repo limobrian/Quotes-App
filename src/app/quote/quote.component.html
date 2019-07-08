@@ -8,7 +8,7 @@
 
 
 <div class="row" id="dis">
-  <div class="col-6">
+  <div>
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 
 
@@ -23,10 +23,12 @@
         <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
           <hr>
         </app-quote-details>
+        <p *ngIf='Quotes.length> 3'> End of uploaded Quotes</p>
       </div>
     </div>
+
   </div>
 
 
 
-  <p *ngIf='Quotes.length> 3'> End of uploaded Quotes</p>
+ 
