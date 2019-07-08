@@ -1,8 +1,9 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="mov">
       <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div  class="form-group">
-  
+
+  <h3> Add your Inspring Quote</h3>
           <label for="name"> Author:</label>
           <br>
          <input class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required >
