@@ -19,7 +19,7 @@
         <h3 id="{{i}}" appStrikethrough>{{quote.name}} : {{quote.completeDate|date|lowercase}}</h3>
 
         <div>
-          <a href="#" class="btn btn-sm animated-button thar-one" (click)='toogleDetails(i)'>open to read</a> </div>
+          <a href="#" (click)='toogleDetails(i)'>open to read</a> </div>
 
         <div *ngIf="quote.showDescription">
           <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
