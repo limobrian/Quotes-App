@@ -1,4 +1,4 @@
-# Quote-App
+# Quotes-App
 
 ## AUTHOR
  limobrian
