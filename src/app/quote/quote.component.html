@@ -16,7 +16,7 @@
     </div>
     <div class="col-6" id="try">
       <div *ngFor='let quote of Quotes;let i = index'>
-        <h3 id="{{i}}" appStrikethrough>{{quote.name}} : {{quote.completeDate|date|lowercase}}</h3>
+        <!-- <h3 id="{{i}}" appStrikethrough>{{quote.name}} : {{quote.completeDate|date|lowercase}}</h3> -->
 
         <div>
           <a href="#" (click)='toogleDetails(i)'>open to read</a> </div>
