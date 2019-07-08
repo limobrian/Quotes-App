@@ -8,5 +8,10 @@
     background-color: gray
 }
 #dis{
+    background-color: gray;
+    margin-left: 17%;
     text-align: center;
+}
+#try{
+    margin-top:10%;
 }
