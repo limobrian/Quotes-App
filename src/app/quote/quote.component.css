@@ -1,3 +1,6 @@
+.container{
+    background-color: bisque;
+}
 .head{
     background-color: gray;
     background: cover;
@@ -9,8 +12,9 @@
 }
 #dis{
     background-color: gray;
-    margin-left: 17%;
+    padding: 10px;
     text-align: center;
+    height: 100%;
 }
 #try{
     margin-top:10%;
